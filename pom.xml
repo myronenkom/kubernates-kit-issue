@@ -11,7 +11,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <vaadin.version>24.4.11</vaadin.version>
+        <vaadin.version>24.3.5</vaadin.version>
         <kubernetes.kit.version>2.2-SNAPSHOT</kubernetes.kit.version>
     </properties>
 

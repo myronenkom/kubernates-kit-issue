@@ -3,9 +3,6 @@ package org.vaadin.example.tesetview;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
-import com.vaadin.flow.spring.annotation.SpringComponent;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
 
 /**
  * A Designer generated component for the test-design template.
@@ -15,8 +12,6 @@ import org.springframework.context.annotation.Scope;
  */
 @Tag("test-design")
 @JsModule("./views/test-design.ts")
-@SpringComponent
-@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class TestDesign extends LitTemplate {
 
     /**
