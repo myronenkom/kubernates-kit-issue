@@ -9,6 +9,7 @@ public class MainView extends VerticalLayout {
 
     private final SomeBeanLayout someBeanLayout;
 
+
     public MainView(SomeBeanLayout someBeanLayout) {
         this.add(new Span("qq"));
         this.someBeanLayout = someBeanLayout;

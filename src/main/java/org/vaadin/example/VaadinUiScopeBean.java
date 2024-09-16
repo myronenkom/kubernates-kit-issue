@@ -1,12 +1,13 @@
 package org.vaadin.example;
 
-import com.vaadin.flow.spring.annotation.UIScope;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
 @Component
-@UIScope
+@Scope(value = "vaadin-ui", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class VaadinUiScopeBean implements Serializable {
 
     public void testMe() {

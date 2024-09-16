@@ -5,6 +5,7 @@ import com.vaadin.flow.spring.annotation.SpringComponent;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
+import org.vaadin.example.tesetview.TestDesign;
 
 import java.io.Serializable;
 
@@ -13,9 +14,11 @@ import java.io.Serializable;
 public class SomeBeanLayout implements Serializable {
 
     private final transient VaadinUiScopeBean vaadinUiScopeBean;
+    private final transient TestDesign testView;
 
-    public SomeBeanLayout(VaadinUiScopeBean vaadinUiScopeBean) {
+    public SomeBeanLayout(VaadinUiScopeBean vaadinUiScopeBean, TestDesign testView) {
         this.vaadinUiScopeBean = vaadinUiScopeBean;
+        this.testView = testView;
     }
 
     @PostConstruct
