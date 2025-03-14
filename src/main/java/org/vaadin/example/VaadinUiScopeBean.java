@@ -1,15 +1,15 @@
 package org.vaadin.example;
 
+import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
-
 @Component
 @UIScope
-public class VaadinUiScopeBean implements Serializable {
+public class VaadinUiScopeBean extends VerticalLayout {
 
-    public void testMe() {
-        System.out.println("I'm working");
+    public void reinitialize() {
+        this.add(new Span("UI scope component"));
     }
 }
