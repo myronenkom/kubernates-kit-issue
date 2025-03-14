@@ -4,12 +4,20 @@ Vaadin Kubernetes Kit Session Serialization Issue Reproduction
 This project demonstrates the session serialization issue encountered in the Vaadin Kubernetes Kit. Follow the steps below to reproduce the problem:
 
 ### Prerequisites
-Java Development Kit (JDK) 17 or later
+Java Development Kit (JDK) 21 or later
 Maven (for building the project)
 Docker (for running Kubernetes locally)
 
-### Steps to Reproduce
-cd vaadin-k8s-session-issue
+### Steps to Reproduce (Dev Mode)
+
+Just add the following VM options and run the project:
+
+```
+--add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED -Dsun.io.serialization.extendedDebugInfo=true
+```
+
+### Steps to Reproduce (Production Mode)
+
 
 #### Build the Project:
 
