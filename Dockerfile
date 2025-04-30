@@ -1,6 +1,5 @@
-FROM openjdk:17-jdk-slim
+FROM amazoncorretto:21.0.6-al2
 COPY target/*.jar /usr/app/app.jar
-RUN useradd -m myuser
-USER myuser
+USER nobody
 EXPOSE 8080
 CMD java -jar /usr/app/app.jar
