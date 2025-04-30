@@ -1,4 +1,4 @@
-package org.vaadin.example;
+package org.vaadin.example.serialization;
 
 import com.vaadin.flow.server.VaadinServiceInitListener;
 import com.vaadin.kubernetes.starter.SerializationProperties;
