@@ -9,4 +9,12 @@ import org.springframework.stereotype.Component;
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CustomSpreadsheet extends Spreadsheet {
 
+    public CustomSpreadsheet() {
+        var generator = new RandomExcelGenerator();
+        generator.generateData(getWorkbook());
+        setSizeFull();
+
+        setRowColHeadingsVisible(false);
+        this.createFreezePane(1, 0);
+    }
 }
